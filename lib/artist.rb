@@ -10,11 +10,11 @@ class Artist
   def add_song(song)
     @songs << song
     song.artist = self
-    save
+    save if !all.include?(self)
   end
 
   def self.all
-    @@all.uniq
+    @@all
   end
 
   def save
