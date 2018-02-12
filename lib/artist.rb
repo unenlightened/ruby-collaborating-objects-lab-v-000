@@ -10,7 +10,7 @@ class Artist
   def add_song(song)
     @songs << song
     song.artist = self
-    save if !all.include?(self)
+    save if !@@all.include?(self)
   end
 
   def self.all
