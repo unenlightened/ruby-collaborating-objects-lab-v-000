@@ -6,7 +6,7 @@ class MP3Importer
   end
 
   def files                #  test path is ./spec/fixtures/mp3s
-    @files = Dir["#{@path}/*.mp3"].each {|filename| filename.slice!("#{@path}/")}
+    Dir["#{@path}/*.mp3"].each {|filename| filename.slice!("#{@path}/")}
   end
 
   def import
