@@ -8,12 +8,12 @@ class Song
   def self.new_by_filename(filename)
     name = filename.chomp(".mp3").split(" - ")
 
-    song = self.new
+    song = self.new(name[1])
     song.title = parsed.first
     song
   end
 
   def artist_name
-    
+
   end
 end
