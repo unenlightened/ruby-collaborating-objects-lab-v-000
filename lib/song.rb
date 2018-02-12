@@ -13,6 +13,6 @@ class Song
   end
 
   def artist_name=(name)
-    artist.name = name if artist.find_or_create_by_name(name)
+    # artist.name = name if artist.find_or_create_by_name(name)
   end
 end
