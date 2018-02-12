@@ -5,14 +5,15 @@ class Song
     @name = name
   end
 
-  def self.new_by_filename(filename)   # :file_name {'Michael Jackson - Black or White - pop.mp3'}
+  def self.new_by_filename(filename)
     name = filename.chomp(".mp3").split(" - ")
 
-    self.new(name[1])
-    artist_name = (name[0])
+    song = self.new
+    song.title = parsed.first
+    song
   end
 
-  def artist_name=(name)
-    # artist.name = name if artist.find_or_create_by_name(name)
+  def artist_name
+    
   end
 end
