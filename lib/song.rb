@@ -5,8 +5,10 @@ class Song
     @name = name
   end
 
-  def self.new_by_filename(filename)
+  def self.new_by_filename(filename)   # :file_name {'Michael Jackson - Black or White - pop.mp3'}
     name = filename.split(" - ")
+
+    new(name[1])
   end
 
   def artist_name
